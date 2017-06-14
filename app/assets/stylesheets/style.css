@@ -41,3 +41,8 @@ body{
   padding: 0 1em;
   width: 80%;
 }
+
+.header a, .header a:hover, .header a:visited, .header a:focus{
+  color: white;
+  text-decoration: none;
+}
