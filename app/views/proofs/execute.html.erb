@@ -1,0 +1,53 @@
+<% @arrays = make_arrays(@num) %>
+<% @hash_intersection = hash_intersection(@arrays)%>
+<% @iteration_intersection = iteration_intersection(@arrays) %>
+
+<div class="row">
+    <div class="col span-5-t span-4-d">
+      <div class="grey event">
+        <h3>Generated two random arrays.</h3>
+      </div>
+        <h5>Each of length <%= params[:input_num] %>.</h5>
+        <h5>Values ranging between 1 and 50000.</h5>
+    </div>
+    <div class="col span-5-t span-4-d">
+      <div class="image">
+        <%= image_tag "make_arrays", width: "290" %>
+      </div>
+    </div>
+  </div>
+
+<hr class="hr">
+
+  <div class="row">
+    <div class="col span-5-t span-4-d">
+      <div class="red event">
+        <h3>Found intersection between arrays using iteration:</h3>
+      </div>
+      <h5>Time to complete: <span class="red"><%= @iteration_intersection[:runtime].round(4) %></span> seconds. </h5>
+      <h5>Number of numbers found in both arrays: <%= @iteration_intersection[:found].length %></h5>
+    </div>
+    <div class="col span-5-t span-4-d">
+      <div class="image">
+        <%= image_tag "iteration_intersection", width: "290" %>
+      </div>
+    </div>
+  </div>
+
+<hr class="hr">
+
+<div class="row">
+  <div class="col span-5-t span-4-d">
+    <div class="green event">
+      <h3>Found intersection between arrays using a hash:</h3>
+    </div>
+    <h5>Time to complete: <span class="green"><%= @hash_intersection[:runtime].round(4) %></span> seconds. </h5>
+    <h5>Time to build hash: <%= @hash_intersection[:hashbuilt].round(4) %> seconds. </h5>
+    <h5>Number of numbers found in both arrays: <%= @hash_intersection[:found].length %></h5>
+  </div>
+  <div class="col span-5-t span-4-d">
+    <div class="image">
+      <%= image_tag "hash_intersection", width: "290" %>
+    </div>
+  </div>
+</div>
