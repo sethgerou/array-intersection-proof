@@ -1,0 +1,43 @@
+body{
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.header{
+  text-align: center;
+  background-color: grey;
+  color: white;
+  padding: 1em;
+}
+
+.image{
+  margin: 1.5em 0;
+}
+
+.row{
+  margin: auto;
+}
+
+.hr{
+  width: 70%;
+}
+
+.red{
+  background-color: red;
+  color: white;
+}
+
+.green{
+  background-color: green;
+  color: white;
+}
+
+.grey{
+  background-color: grey;
+  color: white;
+}
+
+.event{
+  padding: 0 1em;
+  width: 80%;
+}

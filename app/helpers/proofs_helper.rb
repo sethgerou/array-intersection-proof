@@ -1,7 +1,6 @@
 module ProofsHelper
 
   def make_arrays(input_num)
-
     return_array = []
     array1 = []
     array2 = []
@@ -11,7 +10,6 @@ module ProofsHelper
 
     return_array.push(array1, array2)
     return_array
-
   end
 
   def hash_intersection(arrays)
@@ -19,23 +17,19 @@ module ProofsHelper
 
     hash = {}
     arrays[0].each { |value| hash[value] = ""}
-
     hash_built = Time.now - start
 
     found = []
-
     arrays[1].each do |value|
       found << value if hash[value]
     end
 
     runtime = Time.now - start
     hash_results = {
-      runtime: runtime,
-      hashbuilt: hash_built,
-      found: found.uniq
-    }
-
-    hash_results
+                    runtime: runtime,
+                    hashbuilt: hash_built,
+                    found: found.uniq
+                    }
   end
 
   def iteration_intersection(arrays)
@@ -51,11 +45,9 @@ module ProofsHelper
 
     runtime = Time.now - start
     iteration_results = {
-      runtime: runtime,
-      found: found.uniq
-    }
-
-    iteration_results
+                        runtime: runtime,
+                        found: found.uniq
+                        }
   end
 
 end
