@@ -1,1 +1,14 @@
-<h3>The input number is: <%= params[:input_num] %> </h3>
+<h3>Generated two random arrays of length <%= params[:input_num] %> with values ranging between 1 and 50000.</h3>
+
+<% @arrays = make_arrays(@num) %>
+<% @hash_intersection = hash_intersection(@arrays)%>
+<% @iteration_intersection = iteration_intersection(@arrays) %>
+
+<h1>Finding intersection between arrays using iteration:</h1>
+<h3>Time to complete: <%= @iteration_intersection[:runtime] %> </h3>
+<h3>Number of numbers found in both arrays: <%= @iteration_intersection[:found].length %></h3>
+<hr />
+<h1>Finding intersection between arrays using a hash:</h1>
+<h3>Time to complete: <%= @hash_intersection[:runtime] %> </h3>
+<h3>Time to build hash: <%= @hash_intersection[:hashbuilt] %> </h3>
+<h3>Number of numbers found in both arrays: <%= @hash_intersection[:found].length %></h3>

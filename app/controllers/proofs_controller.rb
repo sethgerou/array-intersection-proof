@@ -4,8 +4,7 @@ class ProofsController < ApplicationController
   end
 
   def execute
-    num = params[:input_num]
-    ActionController::Base.helpers.HashHelper.intersection(num)
+    @num = params[:input_num].to_i
   end
 
 end
